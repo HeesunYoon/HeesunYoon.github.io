@@ -18,7 +18,8 @@ body {
 #username {
   position: fixed;
   top: 6rem;
-  color: #7C838D;
+  color: #ebeef3;
+  text-shadow: 1px 0 0 #fff, 0 0 0.2em #a3b1c6, 0 0 0.1em #a3b1c6;
 }
 #weather {
   width: 100%;
@@ -28,7 +29,6 @@ body {
   line-height: 4;
   color: #7C838D;
   font-weight: 400;
-  /* box-shadow: #32325d45 0 10px 10px -10px; */
   text-align: center;
 }
 #weather > span {

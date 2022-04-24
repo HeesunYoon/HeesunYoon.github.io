@@ -9,19 +9,20 @@ function todoSubmit(event){
   const USERNAME_KEY_ = "username";
   const usernameSave_ = localStorage.getItem(USERNAME_KEY_);
   event.preventDefault();
-  const todoText = todoInput.value
-  todoInput.value = "";
 
   if(usernameSave_ == null){
-    alert('Please log in.');
+    alert('Please login');
     todoInput.value = "";
     return false;
   }
+  const todoText = todoInput.value
+  todoInput.value = "";
 
   const todoObject = {
     id : Date.now(),
     text : todoText
   };
+  
   todoArray.push(todoObject);
   todoCreate(todoObject);
   todoSave();
@@ -29,12 +30,18 @@ function todoSubmit(event){
 
 function todoSave(){
   localStorage.setItem("todo", JSON.stringify(todoArray));
+  if(todoArray.length > 4){
+    todoForm.style.display = 'none';
+  }
 }
 
 function todoClose(event){  
   const li = event.target.parentElement;
   li.remove();
   todoArray = todoArray.filter(num => num.id != li.id);
+  if(todoArray.length < 5){
+    todoForm.style.display = 'grid';
+  }
   todoSave();
 }
 
@@ -56,4 +63,7 @@ todoForm.addEventListener("submit", todoSubmit);
 if(todoGetItem !== null){
   todoArray = todoGetItem;
   todoGetItem.forEach(todoCreate);
+}
+if(todoArray.length > 4){
+  todoForm.style.display = 'none';
 }

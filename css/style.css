@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Gothic&family=Noto+Serif+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100&family=Noto+Serif+KR:wght@300&family=Roboto+Condensed&display=swap');
+
+li, ul {
+  list-style: none;
+}
+html {
+  
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #E0EAFC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgb(207, 222, 243), rgb(224, 234, 252));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(207, 222, 243), rgb(224, 234, 252)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#username {
+  position: fixed;
+  top: 6rem;
+  color: #7C838D;
+}
+#weather {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  line-height: 4;
+  color: #7C838D;
+  font-weight: 400;
+  /* box-shadow: #32325d45 0 10px 10px -10px; */
+  text-align: center;
+}
+#weather > span {
+  width: 50px;
+}
+#weather img {
+  height: 65px;
+}
+#timer  {
+  font-size: 3rem;
+  color: #e0e5ec;
+  text-shadow: 1px 0 0 #fff, 0 0 0.1em #a3b1c6, 0 0 0.1em #a3b1c6;
+  position: fixed;
+  top:20px;
+  left: 30px;
+}
+#login-box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding-top: 15rem;
+}
+#login-box input {
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  border-radius: 16px;
+  padding: 16px;
+  background-color:#EBECF0;
+  text-shadow: 1px 1px 0 #BABECC;
+}
+#login-box input[type=text] {
+    box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    margin-bottom: 23px;
+}
+#login-box input[type=submit] {
+  width: 100%;
+  color:#61677C;  
+  box-shadow: -5px -5px 20px #fff,  5px 5px 20px #BABECC;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+#login-box button:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #BABECC;
+}
+#login-box input:focus {
+  box-shadow:  inset 1px 1px 2px #BABECC, inset -1px -1px 2px #fff;
+}
+#todo-box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding-top: 8rem;
+}
+#todoList {
+  font-family: 'Noto Serif KR', serif;
+  width: 860px;
+  border-radius: 15px;
+  padding: 50px;
+  background: linear-gradient(
+    -50deg,
+     rgba(255,255,255,.30),
+     rgba(255,255,255,.25)
+    );
+  box-shadow: #ffffff26 0 0 0 1px, #32325d45 0 80px 120px -20px, #0000004d 0 30px 60px -10px;
+  font-size: 1.4rem;
+  border: 1px solid #dee9ff;
+}
+#todoList > li:first-child {
+  margin-top: 0;
+}
+#todoList > li {
+  margin-top:10px;
+}
+#todoList button {
+  border: 0;
+  background: #191919;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 6px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+#todoForm {
+  width: 100%;
+  position: fixed;
+  bottom:34%;
+  display: grid;
+  place-items: center;
+}
+#todoForm input {
+  width: 535px;
+  /* text-align: center; */
+  padding: 1rem;
+  color: rgba(124, 131, 141);
+  border-radius: 0.7rem;
+  background-color: #fff;
+  background-image: linear-gradient(-10deg,#f6f2f8,#f0f4fa 80%);
+  border: 1px solid rgba(255,255,255,.25);
+  box-shadow: #32325d40 0 50px 100px -20px, #0000004d 0 25px 30px -20px;
+}
+#todoForm input::placeholder { 
+  opacity: 60%;
+}
+
+.hidden {
+  display: none;
+}

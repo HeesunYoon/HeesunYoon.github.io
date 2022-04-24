@@ -6,9 +6,17 @@ const todoGetItem = JSON.parse(localStorage.getItem("todo"));
 let todoArray = [];
 
 function todoSubmit(event){
+  const USERNAME_KEY_ = "username";
+  const usernameSave_ = localStorage.getItem(USERNAME_KEY_);
   event.preventDefault();
   const todoText = todoInput.value
   todoInput.value = "";
+
+  if(usernameSave_ == null){
+    alert('Please log in.');
+    todoInput.value = "";
+    return false;
+  }
 
   const todoObject = {
     id : Date.now(),

@@ -16,6 +16,8 @@ function onLoginSubmit(event){
 
 function paintGreeting(usernameSave){
   username.innerHTML = `Wellcome, ${usernameSave}`;
+  loginBox.style.display = 'none';
+  todoBox.style.display = 'grid';
   loginForm.classList.add(HIDDEN_CLASSNAME);
   username.classList.remove(HIDDEN_CLASSNAME);  
 }
